@@ -11,5 +11,6 @@ public interface CustomerService  {
      CustomerResponseDTO getCustomer(String id);                       // getCustomer methode
      CustomerResponseDTO update(CustomerRequestDTO customerRequestDTO); //update methode
 
+
      List<CustomerResponseDTO> listCustomers();                          //Afficher la liste des Customers
 }

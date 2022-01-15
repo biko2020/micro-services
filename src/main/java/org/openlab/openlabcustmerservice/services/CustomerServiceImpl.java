@@ -29,7 +29,7 @@ public class CustomerServiceImpl implements CustomerService {
     public CustomerResponseDTO save(CustomerRequestDTO customerRequestDTO) {
 
      Customer customer = customerMapper.customerRequestDTOtoCustomer(customerRequestDTO);
-     Customer saveCustomer = CustomerRepository.save(customer);
+     Customer saveCustomer = customerRepository.save(customer);
 
      CustomerResponseDTO customerResponseDTO = customerMapper.customerToCustomerResponseDTO(saveCustomer);
      return customerResponseDTO;
@@ -53,7 +53,7 @@ public class CustomerServiceImpl implements CustomerService {
         List<Customer> customers = customerRepository.findAll();
         List<CustomerResponseDTO> customerResponseDTOS =
                 customers.stream()
-                        .map(cust->customerMapper.customerToCustomerResponseDTO(cust))
+                        .map(customer->customerMapper.customerToCustomerResponseDTO(customer))
                         .collect(Collectors.toList());
         return customerResponseDTOS;
     }

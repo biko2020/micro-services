@@ -8,7 +8,7 @@ import org.openlab.openlabcustmerservice.entities.Customer;
 @Mapper(componentModel = "spring")
 public interface CustomerMapper {
 
-    //declarer les methodes
-    CustomerResponseDTO customerToCustomerResponseDTO(Customer customer); // envoyer data customer
-    Customer customerRequestDTOtoCustomer(CustomerRequestDTO customerRequestDTO);  // recevoir data customer
+    //declarer les methode
+    CustomerResponseDTO customerToCustomerResponseDTO(Customer customer); // send data customer
+    Customer customerRequestDTOtoCustomer(CustomerRequestDTO customerRequestDTO);  // get data customer
 }

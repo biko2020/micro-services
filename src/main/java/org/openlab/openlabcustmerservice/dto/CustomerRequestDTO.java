@@ -6,12 +6,19 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
+//@NoArgsConstructor
+//@AllArgsConstructor
 public class CustomerRequestDTO {
     private String id;
     private String name;
     private String email;
+
+
+   public CustomerRequestDTO(String id, String name, String email){
+       this.id = id;
+       this.name = name;
+       this.email = email;
+   }
 }
 
 
