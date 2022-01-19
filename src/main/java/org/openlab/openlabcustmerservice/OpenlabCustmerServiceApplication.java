@@ -26,8 +26,8 @@ public class OpenlabCustmerServiceApplication {
 
     CommandLineRunner Start(CustomerService customerServices) {
         return args -> {
-            customerServices.save(new CustomerRequestDTO("C01", "Adria", "adria@gmail.com"));
-            customerServices.save(new CustomerRequestDTO("C02", "OpenLop", "OpenLop@gmail.com"));
+            customerServices.save(new CustomerRequestDTO( 1,"Adria", "adria@gmail.com"));
+            customerServices.save(new CustomerRequestDTO(2,"OpenLop", "OpenLop@gmail.com"));
         };
 
     }

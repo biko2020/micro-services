@@ -1,11 +1,12 @@
 //creer  l'entite customer
 
 package org.openlab.openlabcustmerservice.entities;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
 
 // Ajouter les notations
 
@@ -18,7 +19,9 @@ import lombok.NoArgsConstructor;
 
 public class Customer {
     @Id
-    private String id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+
+    private int id = 1;
     private String name;
     private String email;
 }
